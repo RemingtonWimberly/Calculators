@@ -1,0 +1,28 @@
+#Binary to Decimal and Back Converter
+
+def decimal_to_binary(decimal):
+    convert =  bin(decimal).replace("0b", "")
+    print(f'{decimal} converted to binary is {convert}\n')
+
+def binary_to_decimal(binary):
+    convert = (int(str(binary),2))
+    print(f'{binary} converted to decimal is {convert}\n')
+
+def main():
+    while True:
+        choice = int(input('Enter 1 to convert decimal to binary \nEnter 2 to convert binary to decimal\nEnter 3 to exit\nSelection: '))
+
+        if choice == 1:
+            num = int(input('Please enter your Decimal number: '))
+            decimal_to_binary(num)
+        elif choice == 2:
+            num = int(input('Please enter your Binary number: '))
+            binary_to_decimal(num)
+        elif choice == 3:
+            print('\nHave a great day!')
+            break
+        else:
+            print('\nInvalid Selection. Try Again\n')
+
+if __name__== "__main__":
+    main()
